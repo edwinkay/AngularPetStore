@@ -1,0 +1,8 @@
+<form class="form-container">
+  <h3 class="title">BIENVENIDO</h3>
+  <input [formControl]="email" class="email" type="email" placeholder="EMAIL" required="true">
+  <input [formControl]="password" class="pass" type="password" placeholder="CONTRASEÑA" required="true">
+  <a class="forget" href="#">¿olvidaste tu contraseña?</a>
+  <button (click)="onLogin($event)" class="button">INICIAR SESION</button>
+  <p class="account">AUN NO TENGO CUENTA <a href="#">REGISTRARSE</a></p>
+</form>

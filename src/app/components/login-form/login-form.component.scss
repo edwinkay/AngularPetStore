@@ -1,0 +1,63 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: absolute;
+  right: 20%;
+  top: 28%;
+
+}
+
+.title {
+  padding: 5px 10px 5px 30px;
+  color: rgb(59, 58, 58);
+  background-image: url(../../../assets/images/back.png);
+  background-size: 40% 100%;
+  background-repeat: no-repeat;
+}
+
+.email,
+.pass {
+  width: 350px;
+  height: 28px;
+  border: none;
+  box-shadow: 0px 2px 2px #20202049;
+}
+
+.email {
+  margin-top: 18px;
+  margin-bottom: 6px;
+}
+
+.forget {
+  position: relative;
+  left: 190px;
+  color: gray;
+  text-decoration: none;
+}
+
+.button {
+  width: 150px;
+  padding: 15px 23px;
+  margin: 40px 100px 20px;
+  border: none;
+  color: white;
+  background: #4487FF;
+  border-radius: 20px;
+  box-shadow: 1px 1px 30px -5px #20202049;
+  cursor: pointer;
+  transition: box-shadow 500ms;
+}
+
+.account {
+  color: gray;
+  font-size: 10px;
+  text-align: center;
+}
+
+.account a {
+  text-decoration: none;
+  color: rgb(0, 85, 255);
+}

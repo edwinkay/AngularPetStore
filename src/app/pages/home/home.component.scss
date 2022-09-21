@@ -7,6 +7,7 @@
 }
 
 .container_all {
+  background-color: #F3F6FB;
   position: relative;
   right: 0;
   transition: all 300ms;
@@ -15,19 +16,16 @@
   background-repeat: no-repeat;
 }
 
-
-
 /*COVER*/
 
 .cover {
   width: 100%;
   padding-bottom: 120px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   padding-top: 100px;
   position: relative;
   overflow: hidden;
 }
-
 
 .container__cover {
   max-width: 1200px;
@@ -39,7 +37,6 @@
   background-size: cover;
   background-position: bottom;
 }
-
 
 .cover .container__info {
   max-width: 400px;
@@ -53,7 +50,7 @@
   font-size: 50px;
   font: normal normal normal 84px/100px Museo Sans Rounded 700;
   letter-spacing: 0px;
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 1;
   padding-bottom: 20px;
 }
@@ -69,7 +66,7 @@
   margin-top: 40px;
   border: none;
   color: white;
-  background: #4487FF;
+  background: #4487ff;
   border-radius: 20px;
   box-shadow: 1px 1px 30px -5px #20202049;
   cursor: pointer;
@@ -103,16 +100,13 @@
   padding-left: 100px;
 }
 
-
 @media screen and (max-width: 920px) {
-
   .container__vector img {
     width: 500px;
   }
 }
 
 @media screen and (max-width: 760px) {
-
   .cover {
     background-image: url(../../../assets/images/fondo-mobile.png);
   }
@@ -123,14 +117,13 @@
     align-items: center;
   }
 
-
   .btn__menu {
     display: flex;
   }
 
   nav {
     height: 100%;
-    background: #F1FAFF;
+    background: #f1faff;
     position: fixed;
     top: 0;
     right: -180px;
@@ -154,34 +147,33 @@
     transform: scale(0);
     animation: none;
   }
-
 }
-.container-file2{
+.container-file2 {
   display: flex;
   margin-top: 380px;
 }
-.services-container{
+.services-container {
   margin: 30px 180px;
 }
-.services-container h3{
+.services-container h3 {
   font: normal normal bold 36px/64px Comfortaa;
   letter-spacing: 0px;
-  color: #FF6752;
+  color: #ff6752;
   opacity: 1;
 }
-.exp{
+.exp {
   font: normal normal normal 20px/24px Open Sans;
   letter-spacing: 0px;
   color: #808080;
   opacity: 0.8;
 }
-.loc{
+.loc {
   font: normal normal bold 17px/54px Segoe UI;
   letter-spacing: 0px;
-  color: #FF6752;
+  color: #ff6752;
   opacity: 1;
 }
-.services-container input{
+.services-container input {
   box-shadow: 0px 3px 6px #00000029;
   border-radius: 40px;
   opacity: 1;
@@ -190,19 +182,18 @@
   height: 60px;
   padding-left: 18px;
 }
-.services-container button{
+.services-container button {
   width: 54px;
   height: 54px;
   border-radius: 50%;
   border: none;
   color: white;
-  background: #FF6752 0% 0% no-repeat padding-box;
-  box-shadow: 0px 3px 6px #FD68454D;
+  background: #ff6752 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #fd68454d;
   opacity: 1;
   position: relative;
   right: 58px;
 }
-
 
 .container__article {
   max-width: 1000px;
@@ -211,6 +202,9 @@
   grid-template-columns: 1fr 1fr;
   flex-wrap: wrap;
   gap: 2em;
+}
+.container__article p{
+  color: #707070;
 }
 
 .container__article .box__article {
@@ -223,61 +217,98 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
-.container-card{
+.box__article img{
+  width: 50px;
+  height: 50px;
+  margin: 18px;
+}
+.container-card {
   margin-top: 500px;
 }
-.container-card h3{
+.container-card h3 {
   font: normal normal bold 24px/34px Comfortaa;
   letter-spacing: 0px;
-  color: #FF6752;
+  color: #ff6752;
   opacity: 1;
   text-align: center;
   padding-bottom: 50px;
 }
-.boxes{
+.boxes {
 }
 
-.container-file3{
+.container-file3 {
   display: flex;
   justify-content: space-evenly;
   margin: 150px;
 }
-.cont2{
+.cont2 {
   position: relative;
   left: 250px;
 }
-.box-card4{
-  width: 150px;
-  height: 150px;
-  background-color: yellow;
+.boxes2{
+  color: #707070;
 }
-.box-card5{
-  width: 150px;
-  height: 150px;
-  background-color: rgb(34, 0, 255);
+.box-card4 {
+  width: 170px;
+  height: 170px;
+  background: white;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 20px;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.box-card5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 20px;
+  opacity: 1;
+  width: 170px;
+  height: 170px;
+  background: white;
   position: relative;
   left: 230px;
+  flex-direction: column;
 }
-.box-card6{
-  width: 150px;
-  height: 150px;
-  background-color: rgb(255, 0, 0);
+.box-card6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 20px;
+  opacity: 1;
+  width: 170px;
+  height: 170px;
+  background: white;
+  flex-direction: column;
 }
-.last-file{
+.box-card4 img,
+.box-card5 img,
+.box-card6 img{
+  width: 50px;
+  height: 50px;
+  margin: 18px;
+}
+.last-file {
   display: flex;
   justify-content: center;
 }
-.last-container{
+.last-container {
   display: flex;
   align-items: center;
   width: 700px;
   height: 230px;
-  background-color: #4487FF;
+  background-color: #4487ff;
   border-radius: 8px;
 }
 
-.last-image div{
+.last-image div {
   background-color: yellow;
   height: 128px;
   width: 128px;
@@ -286,54 +317,52 @@
   top: 86px;
   left: 30px;
 }
-.last-file img{
+.last-file img {
   width: 110px;
   position: relative;
   left: 41px;
   bottom: 57px;
 }
-.last-text{
+.last-text {
   width: 450px;
   position: relative;
   left: 58px;
   bottom: 10px;
 }
-.last-text h3{
+.last-text h3 {
   font: normal normal bold 25px/64px Comfortaa;
   letter-spacing: 0px;
-  color: #FFE530;
+  color: #ffe530;
   opacity: 1;
 }
-.last-text p{
+.last-text p {
   text-align: left;
   font: normal normal normal 18px/20px Open Sans;
   letter-spacing: 0px;
-  color: #F8F8F8;
+  color: #f8f8f8;
   opacity: 1;
   padding-bottom: 20px;
 }
-.last-button{
+.last-button {
   width: 92px;
   height: 35px;
-  background: #F8F8F8 0% 0% no-repeat padding-box;
+  background: #f8f8f8 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
   border-radius: 40px;
   border: none;
   opacity: 1;
-  color: #FE6845;
+  color: #fe6845;
   cursor: pointer;
 }
-
 
 /*AQUI COMIENZA EL FOOTER*/
 
 footer {
   width: 100%;
   padding: 50px 0px;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 
   background-size: cover;
-
 }
 
 .container__footer {
@@ -361,12 +390,11 @@ footer {
   font-weight: 500;
   color: #7a7a7a;
   font-size: 18px;
-
 }
 
 .box__footer h2 {
   margin-bottom: 30px;
-  color: #FFE530;
+  color: #ffe530;
   font-weight: 700;
 }
 

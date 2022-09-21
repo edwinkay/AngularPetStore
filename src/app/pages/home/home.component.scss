@@ -7,7 +7,7 @@
 }
 
 .container_all {
-  background-color: #F3F6FB;
+  background-color: #f3f6fb;
   position: relative;
   right: 0;
   transition: all 300ms;
@@ -203,7 +203,7 @@
   flex-wrap: wrap;
   gap: 2em;
 }
-.container__article p{
+.container__article p {
   color: #707070;
 }
 
@@ -219,7 +219,7 @@
   justify-content: center;
   flex-direction: column;
 }
-.box__article img{
+.box__article img {
   width: 50px;
   height: 50px;
   margin: 18px;
@@ -247,7 +247,7 @@
   position: relative;
   left: 250px;
 }
-.boxes2{
+.boxes2 {
   color: #707070;
 }
 .box-card4 {
@@ -290,7 +290,7 @@
 }
 .box-card4 img,
 .box-card5 img,
-.box-card6 img{
+.box-card6 img {
   width: 50px;
   height: 50px;
   margin: 18px;
@@ -393,15 +393,42 @@ footer {
 }
 
 .box__footer h2 {
-  margin-bottom: 30px;
+  text-align: left;
+  font: normal normal bold 24px/32px Segoe UI;
+  letter-spacing: 0px;
   color: #ffe530;
-  font-weight: 700;
+  opacity: 1;
 }
 
 .box__footer a {
-  margin-top: 10px;
+  font: normal normal normal 18px/32px Segoe UI;
+  letter-spacing: 0px;
   color: #ffffff;
-  font-weight: 600;
+  opacity: 1;
+}
+.footer{
+  margin-top: 37px;
+}
+.adress input{
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 40px;
+  opacity: 1;
+  border: none;
+  width: 193px;
+  height: 60px;
+  padding-left: 18px;
+}
+.adress button{
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  background: #ff6752 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #fd68454d;
+  opacity: 1;
+  position: relative;
+  right: 58px;
 }
 
 .box__footer a:hover {

@@ -1,0 +1,75 @@
+<div>
+  <div>
+    <form
+      *ngIf="!loading"
+      (ngSubmit)="registrar()"
+      [formGroup]="registrarUsuario"
+      class="form-contenedor"
+    >
+      <h3 class="title">REGISTRARSE</h3>
+      <div class="wide1">
+        <input
+          class="email"
+          name="email"
+          type="email"
+          placeholder="EMAIL"
+          formControlName="email"
+        />
+        <span
+          *ngIf="
+            registrarUsuario.get('email')?.hasError('required') &&
+            registrarUsuario.get('email')?.touched
+          "
+          class="text-danger errorLabel"
+          >El <strong>correo </strong>es requerido</span
+        >
+        <span
+          *ngIf="
+            registrarUsuario.get('email')?.hasError('email') &&
+            registrarUsuario.get('email')?.touched
+          "
+          class="text-danger errorLabel"
+          >El <strong>correo </strong>es invalido</span
+        >
+      </div>
+      <div class="wide2">
+        <input
+          class="pass"
+          name="password"
+          type="password"
+          placeholder="CONTRASEÑA"
+          formControlName="password"
+        />
+        <span
+          *ngIf="
+            registrarUsuario.get('password')?.hasError('required') &&
+            registrarUsuario.get('password')?.touched
+          "
+          class="text-danger errorLabel"
+          >La <strong>contraseña </strong>debe contener mas de 6
+          caracteres</span
+        >
+      </div>
+      <div>
+        <input
+          class="pass"
+          name="password"
+          type="password"
+          placeholder="REPETIR CONTRASEÑA"
+          formControlName="repetirPassword"
+        />
+      </div>
+      <button
+        [disabled]="registrarUsuario.invalid"
+        type="submit"
+        class="button"
+      >
+        ACEPTAR
+      </button>
+      <p class="account"><a href="/login">VOLVER</a></p>
+    </form>
+  </div>
+  <div>
+    <app-spinner *ngIf="loading"></app-spinner>
+  </div>
+</div>

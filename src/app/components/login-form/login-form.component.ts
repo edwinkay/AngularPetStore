@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AngularFireAuth } from '@angular/fire/compat/auth'
+import { ToastrService } from 'ngx-toastr';
+import { FirebaseErrorService } from 'src/app/services/firebase-error.service';
 
-type LoginFormData = {
-  email: string,
-  password: string
-}
+// type LoginFormData = {
+//   email: string,
+//   password: string
+// }
 
 @Component({
   selector: 'app-login-form',
@@ -13,17 +17,31 @@ type LoginFormData = {
 })
 export class LoginFormComponent implements OnInit {
 
-  constructor() { }
+  loginUsuario:FormGroup
+  loading: boolean=false
+
+  constructor(private firebaseError:FirebaseErrorService, private fb:FormBuilder, private afAuth:AngularFireAuth, private toastr: ToastrService, private router:Router) {this.loginUsuario =this.fb.group({
+    email: ['',[Validators.required, Validators.email]],
+    password: ['',Validators.required],
+  }) }
 
   ngOnInit(): void {
   }
 
-  email = new FormControl ('')
-  password = new FormControl ('')
+  login(){
+    const email = this.loginUsuario.value.email
+    const password = this.loginUsuario.value.password
 
-  onLogin(event: MouseEvent){
-    console.log('email: ', this.email.value)
-    console.log('password: ', this.password.value)
+    this.loading=true
+    this.afAuth.signInWithEmailAndPassword(email, password).then((user) => {
+      this.router.navigate(['/home'])
+      console.log(user)
+    }).catch((error)=>{
+      this.firebaseError.errorFirebase(error.code)
+      this.loading=false
+      // console.log(error)
+    })
   }
+
 
 }

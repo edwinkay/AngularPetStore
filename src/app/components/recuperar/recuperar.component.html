@@ -1,0 +1,41 @@
+<div>
+  <div *ngIf="!loading">
+    <form
+      [formGroup]="recuperarUsuario"
+      (ngSubmit)="recuperar()"
+      class="form-contenedor"
+    >
+      <h3 class="title">RECUPERAR CUENTA</h3>
+      <div class="wide1">
+        <input
+          class="email"
+          name="email"
+          type="email"
+          placeholder="EMAIL"
+          formControlName="email"
+        />
+        <span
+          *ngIf="
+            recuperarUsuario.get('email')?.hasError('required') &&
+            recuperarUsuario.get('email')?.touched
+          "
+          class="text-danger errorLabel"
+          >El <strong>correo </strong>es requerido</span
+        >
+        <span
+          *ngIf="
+            recuperarUsuario.get('email')?.hasError('email') &&
+            recuperarUsuario.get('email')?.touched
+          "
+          class="text-danger errorLabel"
+          >El <strong>correo </strong>es invalido</span
+        >
+      </div>
+      <button [disabled]="recuperarUsuario.invalid" type="submit" class="button">ACEPTAR</button>
+      <p class="account"><a href="/login">VOLVER</a></p>
+    </form>
+  </div>
+  <div>
+    <app-spinner *ngIf="loading"></app-spinner>
+  </div>
+</div>

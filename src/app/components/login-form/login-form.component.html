@@ -1,8 +1,50 @@
-<form class="form-container">
-  <h3 class="title">BIENVENIDO</h3>
-  <input [formControl]="email" class="email" type="email" placeholder="EMAIL" required="true">
-  <input [formControl]="password" class="pass" type="password" placeholder="CONTRASEÑA" required="true">
-  <a class="forget" href="#">¿olvidaste tu contraseña?</a>
-  <button (click)="onLogin($event)" class="button">INICIAR SESION</button>
-  <p class="account">AUN NO TENGO CUENTA <a href="#">REGISTRARSE</a></p>
-</form>
+<div>
+  <div *ngIf="!loading">
+    <form
+      (ngSubmit)="login()"
+      [formGroup]="loginUsuario"
+      class="form-contenedor"
+    >
+      <h3 class="title">BIENVENIDO</h3>
+      <div class="wide1">
+        <input
+          class="email"
+          name="email"
+          type="email"
+          placeholder="EMAIL"
+          formControlName="email"
+        />
+        <span *ngIf="
+                    loginUsuario.get('email')?.hasError('required') &&
+                    loginUsuario.get('email')?.touched
+                  " class="text-danger errorLabel">El <strong>correo </strong>es requerido</span>
+        <span *ngIf="
+                    loginUsuario.get('email')?.hasError('email') &&
+                    loginUsuario.get('email')?.touched
+                  " class="text-danger errorLabel">El <strong>correo </strong>es invalido</span>
+      </div>
+      <div class="wide2">
+        <input
+          class="pass"
+          name="password"
+          type="password"
+          placeholder="CONTRASEÑA"
+          formControlName="password"
+        />
+        <span *ngIf="
+                    loginUsuario.get('password')?.hasError('required') &&
+                    loginUsuario.get('password')?.touched
+                  " class="text-danger errorLabel">La <strong>contraseña </strong>debe contener mas de 6
+          caracteres</span>
+      </div>
+      <a class="forget" href="recover">¿olvidaste tu contraseña?</a>
+      <button [disabled]="loginUsuario.invalid" type="submit" class="button">INICIAR SESION</button>
+      <p class="account">
+        AUN NO TENGO CUENTA <a href="/register">REGISTRARSE</a>
+      </p>
+    </form>
+  </div>
+  <div>
+    <app-spinner *ngIf="loading"></app-spinner>
+  </div>
+</div>

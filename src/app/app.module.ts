@@ -11,6 +11,19 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { SliderComponent } from './components/slider/slider.component';
+import { RegistrarComponent } from './components/registrar/registrar.component';
+import { VerificarComponent } from './components/verificar/verificar.component';
+import { RecuperarComponent } from './components/recuperar/recuperar.component';
+import { SpinnerComponent } from './shared/spinner/spinner.component';
+import { LoginDesignComponent } from './shared/login-design/login-design.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { RecoverComponent } from './pages/recover/recover.component';
+import { AngularFireModule } from '@angular/fire/compat'
+import { environment } from 'src/environments/environment';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [
@@ -20,14 +33,25 @@ import { SliderComponent } from './components/slider/slider.component';
     LoginFormComponent,
     NavbarComponent,
     NotFoundComponent,
-    SliderComponent
+    SliderComponent,
+    RegistrarComponent,
+    VerificarComponent,
+    RecuperarComponent,
+    SpinnerComponent,
+    LoginDesignComponent,
+    RegisterComponent,
+    RecoverComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     NgImageSliderModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(), // ToastrModule added
   ],
   providers: [],
   bootstrap: [AppComponent]

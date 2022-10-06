@@ -22,12 +22,13 @@ header {
 }
 
 
-.container__header {
+.contenedor__header {
   max-width: 1200px;
   height: 100%;
   display: flex;
   justify-content: space-between;
   margin: auto;
+  margin-top: 20px;
   padding: 0px 60px;
 }
 
@@ -44,7 +45,7 @@ header .logo img {
   border-radius: 50%;
 }
 
-.container__nav {
+.contenedor__nav {
   position: relative;
   height: 100%;
 }
@@ -82,7 +83,14 @@ nav ul li a {
 .nav_mod .select {
   color: white;
 }
-
+.miButton{
+      background-color: blue;
+    border-radius: 12px;
+    padding: 7px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
 
 .btn__menu {
   width: 50px;
